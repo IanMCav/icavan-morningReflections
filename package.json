@@ -1,0 +1,25 @@
+{
+  "name": "exercise7",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/server.js",
+    "pretest": "eslint ./src --fix",
+    "test": "echo \"Tests complete\"",
+    "nodemon": "nodemon --watch ./src ./src/server.js",
+    "build": "babel ./client --out-file ./hosted/es5Scripts.js",
+    "watch": "babel --watch ./client --out-file ./hosted/es5Scripts.js"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.10.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "nodemon": "^1.12.1"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {}
+}
