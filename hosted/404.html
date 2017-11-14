@@ -5,13 +5,46 @@
         <link rel="stylesheet" href="style.css" type="text/css"/>
         <script src="es5Scripts.js"></script>
     </head>
+  <script>
+    window.onload = function() {
+      var aItem = sessionStorage.getItem("a");
+      var block1 = document.querySelectorAll(".hideAfterFirst");
+      
+      var pItem = sessionStorage.getItem("p");
+      var block2 = document.querySelectorAll(".hideAfterSecond");
+      
+      var dItem = sessionStorage.getItem("d");
+      var block3 = document.querySelectorAll(".hideAfterThird");
+      
+      if(aItem) {
+        for (var i = 0; i < block1.length; i++) {
+          block1[i].style.display = "none";
+          document.querySelector(`.${aItem}`).style.display = "inline";
+        }
+      }
+      
+      if(pItem) {
+        for(var i = 0; i < block2.length; i++) {
+          block2[i].style.display = "none";
+          document.querySelector(`.${pItem}`).style.display = "inline";
+        }
+      }
+      
+      if(dItem) {
+        for(var i = 0; i < block3.length; i++) {
+          block3[i].style.display = "none";
+          document.querySelector(`.${dItem}`).style.display = "inline";
+        }
+      }
+    }
+  </script>
     <body>
         <p style="color:white;">While oversleeping can be a concern, so too is <a style="color:white!important" href="H/H1.html">undersleeping</a>.</p>
         <p>When you wake up, there's a brief period of keeping your eyes closed, just embracing the comfort of your bed- a comfort that'll never be achieved when you're trying to fall asleep, and seems only to exist in the need to sleep.</p>
 
-        <p>These decisions spread out, upon waking. Do you <a href="A/A1.html">sleep in</a>, do you <a href="A/A2.html">brush your teeth</a>? Perhaps you'll <a href="A/A3.html">make coffee</a> or <a href="A/A4.html">eat breakfast</a>? <a href="A/A5.html">Read email</a> or even go for <a href="A/A6.html">a jog</a>. Perhaps you'll <a href="A/A7.html">take a shower</a> or even <a href="A/A8.html">all those things</a>.</p>
+      <p>These decisions spread out, upon waking. <span class="hideAfterFirst">Do </span>you <span class="sleepIn hideAfterFirst"><a href="A/A1.html">sleep in</a></span><span class="hideAfterFirst">,  do you </span><span class="brushTeeth hideAfterFirst"><a href="A/A2.html">brush your teeth</a></span><span class="hideAfterFirst">? Perhaps you'll </span><span class="coffee hideAfterFirst"><a href="A/A3.html">make coffee</a></span><span class="hideAfterFirst"> or </span><span class="breakfast hideAfterFirst"><a href="A/A4.html">eat breakfast</a></span><span class="hideAfterFirst">? </span><span class="email hideAfterFirst"><a href="A/A5.html">Read email</a></span><span class="hideAfterFirst"> or even </span><span class="jog hideAfterFirst">go for <a href="A/A6.html"> a jog</a></span><span class="hideAfterFirst">. Perhaps you'll </span><span class="shower hideAfterFirst"><a href="A/A7.html">take a shower</a></span><span class="hideAfterFirst"> or even </span><span class="all hideAfterFirst"><a href="A/A8.html">all those things</a></span>.</p>
         
-        <p>I believe that the first thing we do in the mornings defines our priorities in life- <a href="P/P1.html">cleanliness</a>, <a href="P/P2.html">knowledge</a>, <a href="P/P3.html">physical fitness</a>, <a href="P/P4.html">order</a>, <a href="P/P5.html">self-gratification</a>. However this, too is debatable- instead, might we be defined by what we do after our awaking ritual is complete. Are you a <a href="D/D1.html">student</a>, who slaves away in endless education? Are you an <a href="D/D2.html">employee</a>, who slaves away in the endless monotony of your job? Or perhaps you're <a href="D/D3.html">free</a> from work, from school, from societal expectation and money, deemed the least valuable to society but perhaps the most free?</p>
+      <p>You believe that the first thing you do in the morning defines your priorities in life- <span class="hideAfterSecond cleanliness"><a href="P/P1.html">cleanliness</a></span><span class="hideAfterSecond">, </span><span class="hideAfterSecond knowledge"><a href="P/P2.html">knowledge</a></span><span class="hideAfterSecond">, </span><span class="hideAfterSecond fitness"><a href="P/P3.html">physical fitness</a></span><span class="hideAfterSecond">, </span><span class="hideAfterSecond order"><a href="P/P4.html">order</a></span><span class="hideAfterSecond">, </span><span class="hideAfterSecond gratification"><a href="P/P5.html">self-gratification</a></span>. However this, too is debatable- instead, might you be defined by what you do after our awakening ritual is complete. Are you <span class="hideAfterThird student">a <a href="D/D1.html">student</a>, who slaves away in endless education? </span><span class="hideAfterThird">Are you </span><span class="hideAfterThird employee">an <a href="D/D2.html">employee</a>, who slaves away in the endless monotony of your job?</span><span class="hideAfterThird"> Or perhaps you're </span><span class="hideAfterThird free"><a href="D/D3.html">free</a> from work, from school, from societal expectation and money, deemed the least valuable to society but perhaps the most free?</span></p>
         
         <p style="color:white!important;">Can't you just go <a style="color:white;" href="H/H2.html">back</a> to sleep?</p>
     </body>
